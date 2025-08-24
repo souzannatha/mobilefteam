@@ -6,8 +6,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Personagens'),),
-      body: Center(child: Text('Lita de todos os personagens aqui'),),
+      appBar: AppBar(title: Text('Personagens')),
+      body: Center(child: Text('Lita de todos os personagens aquir!')),
     );
   }
 }
