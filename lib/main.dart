@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:mobilefteam/viewmodels/characters_viewmodel.dart';
 import 'package:mobilefteam/views/home_page.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => CharactersViewmodel(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,4 +26,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
