@@ -9,7 +9,9 @@ Aplicativo Flutter que consome a API de Rick and Morty, exibindo personagens e d
 - Navegação entre a lista e os detalhes.
 - Gerenciamento de estado usando `Provider` e `ChangeNotifier`.
 
-## Estrutura
+## Estrutura do Projeto
+
+```plaintext
 lib/
 ├─ main.dart                        # Entry point do app
 ├─ views/
@@ -19,6 +21,8 @@ lib/
 │   └─ characters_viewmodel.dart    # Lógica de fetch e estado
 └─ models/
     └─ characters.dart              # Model do personagem
+
+```
 
 ## Pacotes utilizados
 - `provider` → Gerenciamento de estado
