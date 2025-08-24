@@ -20,9 +20,6 @@ lib/
 └─ models/
     └─ characters.dart              # Model do personagem
 
-
-
-
 ## Pacotes utilizados
 - `provider` → Gerenciamento de estado
 - `http` → Requisições HTTP
