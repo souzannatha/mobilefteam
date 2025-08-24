@@ -1,16 +1,34 @@
-# mobilefteam
+# Rick and Morty App
 
-A new Flutter project.
+Aplicativo Flutter que consome a API de Rick and Morty, exibindo personagens e detalhes individuais.
 
-## Getting Started
+## Funcionalidades
+- Listagem de personagens com imagem e nome.
+- Tela de detalhes com: nome, status, espécie e imagem.
+- Loading indicator enquanto os dados são carregados.
+- Navegação entre a lista e os detalhes.
+- Gerenciamento de estado usando `Provider` e `ChangeNotifier`.
 
-This project is a starting point for a Flutter application.
+## Estrutura
+lib/
+├─ main.dart # Entry point do app
+├─ views/
+│ ├─ home_page.dart # Lista de personagens
+│ └─ character_detail_page.dart # Detalhes de cada personagem
+└─ viewmodels/
+└─ characters_viewmodel.dart # Lógica de fetch e estado
+└─ models/
+└─ characters.dart # Model do personagem
 
-A few resources to get you started if this is your first Flutter project:
+markdown
+Copiar
+Editar
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Pacotes utilizados
+- `provider` → Gerenciamento de estado
+- `http` → Requisições HTTP
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Como rodar
+```bash
+flutter pub get
+flutter run
