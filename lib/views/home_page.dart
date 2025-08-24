@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobilefteam/viewmodels/characters_viewmodel.dart';
+import 'package:mobilefteam/views/character_detail_page.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,12 +31,23 @@ class _HomePageState extends State<HomePage> {
               itemCount: viewModel.characters.length,
               itemBuilder: (context, index) {
                 final character = viewModel.characters[index];
-                return Row(
-                  children: [
-                    Image.network(character.image, width: 50, height: 50),
-                    SizedBox(width: 10),
-                    Text(character.name),
-                  ],
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) =>
+                            CharacterDetailPage(character: character),
+                      ),
+                    );
+                  },
+                  child: Row(
+                    children: [
+                      Image.network(character.image, width: 50, height: 50),
+                      SizedBox(width: 10),
+                      Text(character.name),
+                    ],
+                  ),
                 );
               },
             );
